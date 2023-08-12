@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best website in the world</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <style>
+        
+        
+
+        /*Utility class*/
+        .section-heading{
+            text-align: center;
+            position: relative;
+            margin-bottom: 4rem;   
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: var(--secondary);
+
+        }
+        .section-heading::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 30px;
+            background-image: url("../logo/hr.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            position:absolute;
+            bottom: -40px;
+        } 
+        .pure{
+            color:var(--pure);
+        }
+        :root{
+            --primary:#EEBF00;
+            --secondary:#232B38;
+            --ternary: #6C6C6C;
+            --danger: #FE4545;
+            --pure: #FEFEFE;
+            --light: #F0F0F0;
+            --heaven: #FFFFFF;
+            --footer: #2D333F;           
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 4000px;
+        }
+
+        /*Header section*/
+        .container{
+            height: 35px;
+            width: 100%;
+            border: 2px solid black;
+            background-color: var(--secondary);
+            display: flex;  
+            justify-content: center;
+            align-items: center;
+        }
+        .logo{
+            display: flex;
+            margin-right: 50%;
+        }
+        .logo a{
+            margin:5px;
+        }
+
+        .auth{
+            display: flex;
+            margin-right: 0.6rem;
+        }
+        .auth a{
+            color: white;
+            margin-right: 0.6rem;
+        }
+
+        .divider{
+            color: white;
+            margin-right: 0.6rem;
+        }
+        .topimg{
+            margin-right: 0.6rem;
+        }
+        /* Navigation section*/
+        .container1{
+            border: 2px solid black;
+            display: flex;
+            gap: 220px;
+            height:55px;
+            border: none;
+        }
+        .container1 .contact{
+            display: flex;
+            font-size:20px;
+            margin-left:175px;
+            overflow:none;
+            margin-top: 5px;
+        }
+
+        .container1 .contact h5,h6{
+            font-size: 17px;
+        }
+        .img{
+            height: 30px;
+            margin-top:15px;
+            margin-right: 5px;
+        }
+        .img1{
+            height: 30px;
+            margin-top: 18px;
+            margin-right: 5px;
+        }
+        .time{
+            display: flex;
+        }
+        .h{
+            font-size: 15px;
+        }
+        .h1{
+            font-size:15px;
+        }
+        .time div{
+            margin-top:18px;
+        }
+        .contact div{
+            margin-top:10px;
+        }
+        /* Navigation bar */
+        .container3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            margin-top: 5px;
+            padding: 5px;
+            border: none;
+
+        }
+        .navbar{
+            background-color: var(--heaven);
+        }
+        .container3 a{
+            color: var(--secondary);
+            font-size: 1rem;
+            padding: 1rem 1.5rem;
+            transition: all .3s ease;
+        }
+        .container3 a.active{
+            background-color: var(--primary);
+            color: var(--pure);
+        }
+        .container3 a:hover{
+            background-color: var(--primary);
+            color: var(--pure);
+        }
+        .navbar::after{
+            content:"";
+            display: block;
+            width: 100%;
+            height: 69px;
+            background-image: url("../logo/shadow.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            bottom: 565px;
+            z-index: -1;
+        }
+        /* Home section(hero) */
+        .hero{
+            height: 500px;
+            background-image: url("../image/hero.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 0% 0%;
+            overflow: hidden;
+            position: relative;
+        }
+        .container4{
+            margin-left: 182px;
+            margin-top: 150px;
+            border: 2px solid transparent;
+            width: 50%;
+        }
+        .welcome{
+            display: flex;
+        }
+        .welcome span{
+            font-size:20px;
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+        .welcome img{
+            display: inline-block;
+            margin-top: 5px;
+        }
+        .container4 h1{
+            margin-top: 5px;
+        }
+        .container4 h1>span{
+            color: var(--primary);
+        }
+        .container4 p{
+            margin-top: 5px;
+        }
+        #btn1{
+            margin-top: 14px;
+            height:35px;
+            width:80px;
+            background-color: var(--primary);
+            color: var(--heaven);
+            border: none;
+            padding: 3px 1px;
+            transition: all .3s ease;
+        }
+        #btn1:hover{    
+            background-color: var(--heaven);
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+        #btn2{
+            margin-top: 14px;
+            height:35px;
+            width:80px;
+            padding: 3px 1px;
+            margin-left: 10px;
+            border: none;
+            background-color:var(--secondary);
+            color: var(--heaven);
+            transition: all .3s ease;
+        }
+        #btn2:hover{    
+            background-color: var(--heaven);
+            border: 1px solid var(--secondary);
+            color: var(--secondary);
+        }
+        .hero-image img{
+            position: absolute;
+            top: 80px;
+            right: 40px;
+            margin-right:400px;
+        }
+
+        /*Slider section*/
+        .top-products{
+            padding: 4rem 0;
+            background: var(--light);  
+        }
+        .slider{
+            width: 80%;
+            margin: auto;
+        }
+        #Top-products{
+            margin-left: 50%;
+            font-size: 35px;
+        }
+        .foodcard{
+            background-color: var(--heaven);
+            padding: 1.5rem 0;
+            border-radius: 4px;
+            margin-left: 35px;
+            margin-top: 80px;
+        }
+        .productimage img{
+            width: 80%;
+            height: 200px;
+            object-fit: contain;
+            padding-bottom: 1rem;
+            margin-left: 10%;
+        }
+        .proimgheading{
+            text-align: center;
+        }
+        .stars{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:5px 0;
+        }
+        .price{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            color: var(--danger);
+        }
+        .foodcard button{
+            color: var(--secondary);
+            background-color: var(--heaven);
+            border: 2px solid var(--primary);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            width: 50%;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all .3s ease;
+            margin-left:25%;
+            height:30px;
+            margin-top: 15px;
+        } 
+        .foodcard button:hover{
+            background-color: var(--primary);
+            color: var(--heaven);
+            transition: 0.3s all ease;
+        }
+        .foodcard button img{
+            border: 2px solid transparent;
+            background-color: var(--primary);
+            height: 30px;
+            margin-right: 1.2rem;
+            padding: 6px;  
+                    
+        }
+
+        .foodcard{
+            margin-right: 35px;
+        }
+        .top-products .slider-btn{
+            width: 30px;
+            height: 30px;
+            border: none;
+            background: var(--primary);
+            border-radius: 4px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .prev-btn{
+            position: absolute;
+            top: 50%;
+            left: -3rem;
+            z-index: 1;
+            padding: 10px;
+            padding-bottom:30px;
+            margin-left: 45px;
+        }
+        .next-btn{
+            position: absolute;
+            top: 50%;
+            right: -3rem;
+            z-index: 1;
+            padding: 10px;
+            padding-bottom:30px;
+            margin-right: 45px;
+        }
+        .top-products .slider{
+            position: relative;
+        }
+        .wrapper-btn{
+            margin-left: 45%;
+            margin-top: 30px;
+            padding: 10px;
+            height: auto;
+            font-size: 15px;
+            background-color:var(--secondary);
+            color: var(--pure);
+            border: 2px solid transparent;
+            border-radius: 4px;
+            transition: all .3s ease;
+        }
+        .wrapper-btn:hover{
+            background-color: var(--heaven);
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        /*About Fresh-meal section*/
+        .Freshmeal-container{
+            height: 500px;
+            width: 100%;
+            border: 2px solid black;
+            border: none;
+            display: flex;
+            flex: 1;
+            background-color: var(--heaven);
+        }
+        .mealheading{
+            margin-top: 45px;
+            margin-bottom:100px;
+        }
+        .mealimg{
+            height: 550px;
+            width: 50%;
+            border: 2px solid black;
+            border: none;
+        }
+        .mealimg img{
+            margin-top:0px;
+            margin-left: 50px;
+            margin-left: 100px;
+        }
+        .mealcontent{
+            height: 550px;
+            width: 40%;
+            border: 2px solid black;
+            border: none;
+        }
+        .mealheading2{
+            margin-top: 50px;       
+        }
+        .mealheading2 h2{
+            font-size: 30px;
+            color: var(--secondary);
+        }
+        .mealpara{
+            margin-top: 50px;
+            font-size: larger;
+            color: var(--secondary);
+        }
+        .mealpara p{
+            padding-top: 20px;
+            grid-area: 20px;
+            color: var(--secondary);
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+        .mealbtn button{
+            height: 40px;
+            width: 100px;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            background-color: var(--secondary);
+            color: var(--heaven);
+            font-size: 15px;
+            transition: all .3s ease;
+        }
+        .mealbtn button:hover{
+            background-color: var(--heaven);
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+            transition: all .3s ease;
+        }
+        /*Services section*/
+        .services-container{
+            height: 550px;
+            width: 100%;
+            border: 2px solid transparent;
+            background-color: var(--light);    
+        }
+        .services-container .services-heading{
+            margin-top: 55px;
+        }
+        .services-container2{
+            display: flex;
+            gap: 35px;
+            height: 250px;
+            width: 80%;
+            margin-left: 11%;
+            border: 2px solid black;
+            border: none;
+            margin-top: 8rem;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            margin-top: 150px;
+            
+        }
+        .servicescard-1{
+            border: 2px solid black;
+            border: none;
+            background-color: var(--heaven);
+            margin-top: -45px;
+            
+        }
+        .services-container2 .icons{
+            position: absolute;
+            top: -49px;
+            margin-left: -4%;
+            transform: translateX(-4%);
+            height:70px;
+            width:70px;
+            
+           
+        }
+        .servicescard-1 h2{
+            margin-top: 50px;
+            color: var(--secondary);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+        .servicescard-1 p{
+            margin-top: 20px;
+            color: var(--secondary);
+            padding: 0 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }   
+        .servicescard-1 button{
+            height: 40px;
+            width: 100px;
+            border-radius: 3px;
+            border: 2px solid transparent;
+            background-color: var(--secondary);
+            color: var(--heaven);
+            font-size: 15px;
+            transition: all .3s ease;
+            margin-top: 20px;
+            margin-right: 10%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .servicescard-1 button{
+            height: 40px;
+            width: 100px;
+            border-radius: 3px;
+            border: 2px solid transparent;
+            background-color: var(--secondary);
+            color: var(--heaven);
+            font-size: 15px;
+            transition: all .3s ease;
+            margin-top: 20px;
+            margin-right: 10%;
+        }
+        .servicescard-1 button:hover{
+            background-color: var(--heaven);
+            color: var(--secondary);
+            border: 2px solid var(--secondary); 
+        }
+        .servicescard-1 .pri{
+            color: var(--primary);
+        }
+        .servicescard-1 .pri2{
+            background-color: var(--primary);
+        }
+
+        /*Big-deals section*/
+        .bigdeals-container{
+            background: linear-gradient(
+                rgba(35,43,56,0.9),
+                rgba(35,43,56,0.9)
+            ),url(../image/food-table.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+
+        }
+        
+        .bigdeals-time{
+            display: flex; 
+            justify-content: center;
+            align-items: center; 
+            gap: 50px;
+            margin-top: 125px;   
+        }
+        .bigdeals-box{
+            
+            display: flex;  
+            height:150px ;
+            width: 150px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: 2px solid transparent;
+            background-color: var(--primary);
+            color: var(--heaven);
+            font-size: 25px;
+            font-family: sans-serif;  
+            margin-bottom: 150px;
+            
+        }
+        .bigdeals-box span:first-child{
+            font-size: 35px;
+        }
+        .bigdeals-heading h2{
+            padding-top: 50px;
+            color:var(--pure);
+        }
+        /*Blog-section*/
+        section.blog{
+            background-color: var(--light);
+        }
+        .blog-container{
+            border: 2px solid transparent;
+            border: none;
+            margin-left: 10%;
+            margin-right: 10%;
+            
+            
+        }
+        .blog-wrapcontaniner{
+            border: 2px solid transparent;
+            border: none;
+            display: flex;
+            gap: 35px;
+        }
+        .blog-items{
+            border: 2px solid transparent;
+            border: none;
+            background-color: var(--heaven);
+            width: 100%;
+            
+           
+        }
+        .blog-container .blog-heading{
+            padding-top: 35px;
+            margin-bottom: 100px;
+        }
+        .blog-container .blog-img img{
+            width: 100%;      
+        }
+        .blog-content .blog-line {
+            margin-top: 35px;
+            margin-bottom: 25px;
+            margin-left: 25px;
+        }
+        .blog-content .blog-line span:last-child{
+            margin-left: 35px;
+        }
+        .blog-container .blog-content{
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        .blog-container .blog-content h2{
+            margin-bottom: 15px;
+        }
+        .blog-container .blog-content p{
+            margin-bottom: 25px;
+            padding-bottom: 35px;
+        }
+        .blog-container .blog-btn button{
+            height: 40px;
+            width: 100px;
+            border-radius: 3px;
+            border: 2px solid transparent;
+            background-color: var(--secondary);
+            color: var(--heaven);
+            font-size: 15px;
+            transition: all .3s ease;
+            margin-top: 20px;
+            margin-right: 10%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 46%;
+            margin-bottom: 45px;
+        }
+        .blog-container .blog-btn button:hover{
+            background-color: var(--heaven);
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+        /*subscribe section*/
+        .subscribe-container{
+            background-color: var(--primary);
+            display: flex;
+            flex: 1;
+           
+        }
+        .subscribe-content{
+            margin-top: 70px;
+            margin-right: 10%;
+            margin-left: 50px;
+        }
+        .subscribe-image{
+           
+            margin-left: 10%;
+        }
+        .subscribe-content div:first-child p{
+            margin-top: 45px;
+            margin-bottom: 45px;
+            font-size: 20px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .subscribe-content div:first-child h2{
+            font-size: 35px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .subscribe-content div:last-child{
+            background-color: var(--heaven);
+            width: 70%;
+            height: 50px;
+        }
+        .subscribe-content div:last-child input{
+            border: none;
+            height: 25px;
+            padding-left:0 1rem;
+            font-size: 1rem;
+        }
+        .subscribe-content div:last-child button{
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            background: var(--primary);
+            border: 2px solid var(--primary);
+            margin-top: 2px;
+            margin-left: 70px;
+            color: var(--pure);
+            transition: all .3s ease;
+        }
+        .subscribe-content div:last-child button:hover{
+            background: var(--secondary);
+            outline: none;
+            border: 2px solid var(--secondary);
+        }
+        .subscribe-content div:last-child{
+            margin-bottom: 15px;
+        }
+        /*contact us section*/
+        .contact-us{
+            display: flex;
+            
+        }
+        .contact-info-wrapper{
+            flex: 1;
+            width: 50%;
+            height: 50vh;
+            
+        }
+        .contact-info{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-info > div > div{
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .contact-info > div > div >div{
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-info > div > div >div span:first-child{
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact-info > div > div img{
+            margin-right: 1rem;
+        }
+        .maps{
+            flex: 1;
+            width: 50%;
+            height: 50vh;
+        }
+        /*Footer section*/
+        footer .box h3{
+            margin-bottom: 20px;
+        }
+        footer{
+            background-color: var(--footer);
+            padding-bottom: 50px;
+        }
+        .footer-container{
+            margin-left: 20%;
+            width: 60%;
+        }
+        footer .footer-container{
+            display: flex;
+        }
+        .box div img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        footer .box{
+            padding-top: 50px;
+            flex: 1;
+            margin-right: 2rem;
+            text-align: center;
+            color: var(--pure);
+            list-style: none;
+            
+        }  
+        footer  .box h2{
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+        }
+        .box ul li{
+            text-decoration: none;
+            display: flex;
+            justify-content: center;      
+        }
+        footer quicklinks{
+            margin-bottom: 25px;
+        }
+        .box ul li a{
+            text-decoration: none;
+            color: var(--pure);
+            line-height: 30px;
+        }
+
+        .box ul li a:hover{
+            columns: var(--primary);
+        }
+       
+        footer .box p{
+            margin-top: 20px ;
+            line-height:25px;
+        }
+        footer .box .footer-btn{
+            margin-top:15px;
+            height: 25px;
+            padding: 0 15px;
+            background-color: var(--secondary);
+            border: none;
+            color: var(--pure);
+        }
+        footer .box > h3{
+            border-bottom: 1px solid var(--primary);
+            padding-bottom: 1rem;
+        }
+        
+
+        footer .box div:last-child span{
+            line-height: 25px;
+        }
+        footer .box:nth-child(3){
+            display: flex;
+            flex-direction: column;
+            line-height: 35px;
+            
+        }
+        footer .box:nth-child(3) img{
+            padding-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">     
+                <div class="logo">
+                    <a href="#"><img src="../logo/facebook.svg" alt=""></a>
+                    <a href="#"><img src="../logo/twitter.svg" alt=""></a>
+                    <a href="#"><img src="../logo/google.svg" alt=""></a>
+                    <a href="#"><img src="../logo/instagram.svg" alt=""></a>
+                    <a href="#"><img src="../logo/search.svg" alt=""></a>
+                </div> 
+                <div class="auth">
+                    <div class="auth1">
+                        <img src="../logo/user-icon.svg" alt="" class="topimg">
+                        <a href="">Log in</a>
+                    </div>
+                    <span class="divider">|</span>
+                    <div class="auth1">
+                        <img src="../logo/edit.svg" alt="" class="topimg">
+                        <a href="">Register now </a>
+                    </div>
+                    <span class="divider">|</span>
+                    <div class="auth1">
+                        <img src="../logo/cart.svg" alt=""class="topimg">
+                        <a href="">Items</a>
+                    </div>
+                </div>     
+        </div>
+    </header>
+        <div class="container1">
+            <div class="contact">
+                <img class="img" src="../logo/phone.svg" alt="">
+                <div>
+                    <h5 class="h">Call us: 123 456 7891</h5>
+                    <h6 class="h">E-mail : supportus@gmail.com</h6>
+                </div>
+            </div>
+            <div class="logo2">
+                <img src="../logo/logo.svg" alt="">
+            </div>
+            <div class="time">
+                <img class="img1" src="../logo/clock.svg" alt="">
+                <div>
+                    <h5 class="h1">Working hours</h5>
+                    <h6 class="h1">Mon-Sat(8.00am - 12.00am)
+                    </h6>
+                </div>
+            </div>
+        </div>
+    <nav class="navbar">
+        <div class="container3">
+                <a class="active"href="">Home</a>
+                <a class="pro"href="products">About us </a>
+                <a class="pro"href="#">Products</a>
+                <a class="pro"href="#">Blog</a>
+                <a class="pro"href="#">Shop</a>
+                <a class="pro"href="#">Services</a>
+                <a class="pro"href="#">Gallery</a>
+                <a class="pro"href="#">Contact us</a>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container4">
+            <div class="welcome">
+                <section>
+                <span>Welcome to</span>
+                <img src="../logo/logo-2.svg" alt="">
+                </div>
+                <h1>The world best <span>Shopping</span> Website</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  laudantium voluptatem <br>dolor provident cupiditate at perferendis, s</p>
+                <div>
+                <button id="btn1">Read more</button>
+                <button id="btn2">Shop now</button>
+                </section>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="../image/straw.png" alt="">
+        </div>
+    </header>
+    <section class="top-products" id="products">
+        <div class="container5">
+            <h1 class="section-heading">Top products</h1>
+            <div class="slider">
+                <buttoon id="prev-btn" class="slider-btn prev-btn"><img src="../logo/pre.svg" alt=""></buttoon>
+                <buttoon id="next-btn" class="slider-btn next-btn"><img src="../logo/next.svg" alt=""></buttoon>
+                <div class="food-slider">
+                    <div class="foodcard">
+                        <div class="productimage">
+                            <img src="../image/plate-1.png" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="proimgheading">Summer salad</h2>
+                            <div class="stars">
+                                <img src="../logo/start-filled.svg" alt="">
+                                <img src="../logo/start-filled.svg" alt="">
+                                <img src="../logo/start-filled.svg" alt="">
+                                <img src="../logo/star-grey.svg" alt="">
+                                <img src="../logo/star-grey.svg" alt="">
+                            </div>
+                            <div class="price">
+                                $ 1.25
+                            </div>
+                            <div>
+                                <button class="btn">
+                                    <img src="../logo/cart.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foodcard">
+                        <div class="productimage">
+                            <img src="../image/plate-2.png" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="proimgheading">Russian salad</h2>
+                            <div class="stars">
+                                <img src="../logo/start-filled.svg" alt="">
+                                <img src="../logo/start-filled.svg" alt="">
+                                <img src="../logo/start-filled.svg" alt="">
+                                <img src="../logo/star-grey.svg" alt="">
+                                <img src="../logo/star-grey.svg" alt="">
+                            </div>
+                            <div class="price">
+                                $ 1.25
+                            </div>
+                            <div>
+                                <button class="btn">
+                                    <img src="../logo/cart.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foodcard">
+                        <div class="productimage">
+                            <img src="../image/plate-3.png" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="proimgheading">Greek salad</h2>
+                            <div class="stars">
+                                <img src="../logo/start-filled.svg" alt="">
+                                <img src="../logo/start-filled.svg" alt="">
+                                <img src="../logo/start-filled.svg" alt="">
+                                <img src="../logo/star-grey.svg" alt="">
+                                <img src="../logo/star-grey.svg" alt="">
+                            </div>
+                            <div class="price">
+                                $ 1.25
+                            </div>
+                            <div>
+                                <button class="btn">
+                                    <img src="../logo/cart.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foodcard">
+                        <div class="productimage">
+                            <img src="../image/plate-2.png" alt="">
+                        </div>
+                        <hr>
+                        <div>
+                            <h2 class="proimgheading">Cottage PI</h2>
+                            <div class="stars">
+                                <img src="../logo/start-filled.svg" alt="">
+                                <img src="../logo/start-filled.svg" alt="">
+                                <img src="../logo/start-filled.svg" alt="">
+                                <img src="../logo/star-grey.svg" alt="">
+                                <img src="../logo/star-grey.svg" alt="">
+                            </div>
+                            <div class="price">
+                                $ 1.25
+                            </div>
+                            <div>
+                                <button class="btn">
+                                    <img src="../logo/cart.svg" alt="">
+                                    <span>Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="wrapper-btn">View More</button>
+            </div>
+        </div>
+    </section>
+    <section class="Fresh-meal">
+        <div class="mealheading">
+            <h2 class="section-heading">About Fresh Meal</h2>
+        </div>
+        <div class="Freshmeal-container">
+            <div class="mealimg">
+                <img src="../image/yogurt.png" alt="">
+            </div>
+            <div class="mealcontent">
+                <div class="mealheading2">
+                    <h2>Freshmeal is a long established fact that a reader will  be distracted</h2>
+                </div>
+                <div class="mealpara">
+                    <p>Corry to popular belief om psum not simply and esta roots in a pece of clac Late from 45 BC ning over 2000 years old Richard McCartock a Latin professor at Hampden Sydney College in Virginia The standard chunk of Lorem med since the</p>
+                </div>
+                <div class="mealbtn">
+                    <button>Read more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services">
+        <div class="services-container">
+            <div class="services-heading section-heading">
+                <h2>Our Services</h2>
+            </div>
+            <div class="services-container2">
+                <div class="servicescard-1">
+                    <img class="icons"src="../logo/transport.svg" alt="">
+                    <h2>Free Home delivery</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea numquam quos!</p>
+                    <button>Read More</button>
+                </div>
+                <div class="servicescard-1 ">
+                    <img class="icons"src="../logo/bag.svg" alt="">
+                    <h2 class="pri" >30 Days ReturnServices</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea numquam quos!</p>
+                    <button class="pri2">Read More</button>
+
+                </div>
+                <div class="servicescard-1 ">
+                    <img class="icons"src="../logo/usd.svg" alt="">
+                    <h2>Money Back Guranted</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ea numquam quos!</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="big-deals">
+        <div class="bigdeals-container">
+            <div class="bigdeals-heading section-heading">
+                <h2>Big Deals Of The Week</h2>
+            </div>
+            <div class="bigdeals-time">
+                <div class="bigdeals-box">
+                    <span id="days">02</span>
+                    <span>Days</span>
+                </div>
+                <div class="bigdeals-box">
+                    <span id="hours">24</span>
+                    <span>Hours</span>
+                </div>
+                <div class="bigdeals-box">
+                    <span id="minutes">55</span>
+                    <span>Minutes</span>
+                </div>
+                <div class="bigdeals-box">
+                    <span id="seconds">58</span>
+                    <span>seconds</span>
+                </div>
+            </div>        
+        </div>
+    </section>
+
+    <!--Blog section-->
+    <section class="blog">
+        <div class="blog-container">
+            <div class="blog-heading section-heading">
+                <h2>Latest News From Blog</h2>
+            </div>
+            <div class="blog-wrapcontaniner">
+                <div class="blog-wrapper">
+                    <div class="blog-items" id="blog-item1">
+                        <div class="blog-img">
+                            <img src="../image/donut.jpg" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-line">
+                                <span >July 03 2017</span>
+                                <span >Produced by <strong>FreshMeal</strong></span>                           
+                            </div>
+                        
+                        <h2>Lorem Ipsum is simply dummy text of the printing</h2>
+                        <p>isang established fact that a reader will be dcted by the date content of a pags when looking at tayout The port of using Lorem ipsum is that thos more letters</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-wrapper">
+                    <div class="blog-items" id="blog-item1">
+                        <div class="blog-img">
+                            <img src="../image/coffee.jpg" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-line">
+                                <span >July 03 2017</span>
+                                <span >Produced by <strong>FreshMeal</strong></span>                           
+                            </div>
+                        
+                        <h2>Lorem Ipsum is simply dummy text of the printing</h2>
+                        <p>isang established fact that a reader will be dcted by the date content of a pags when looking at tayout The port of using Lorem ipsum is that thos more letters</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-btn">
+                <button>View More</button>
+            </div>          
+        </div>
+    </section>
+    <!--Subscribe section-->
+    <section class="subscribe-container">
+        <div class="subscribe-image">
+            <img src="../image/rasberry.png" alt="">
+        </div>
+        <div class="subscribe-content">
+            <div>
+                <h2>Subscribe to your newsletter</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium laboriosam veritatis id minus aliquid ipsam ex, quas repudiandae autem reiciendis!</p>
+            </div>
+            <div>
+                <input type="text" placeholder="freshmeal@gmail.com">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </section>
+    <section class="contact-us">
+        <div class="contact-info-wrapper">
+            <h1 class="contact-heading section-heading">contact us</h1>
+            <div class="contact-info">
+                <div>
+                    <div>
+                        <img src="../logo/phone-2.svg" alt="">
+                        <div>
+                            <span>Call us:</span>
+                            <span>(+84) 123 456 789</span>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="../logo/email.svg" alt="">
+                        <div>
+                            <span>E-mail :</span>
+                            <span>supportus@gmail.com</span>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="../logo/clock-2.svg" alt="">
+                        <div>
+                            <span>Working hours:</span>
+                            <span>Mon - Sat ( 8.00am -12.00am )</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15551.931999546672!2d77.62793439691102!3d12.972939047478633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16a418770391%3A0xb50f46b826501036!2sIndiranagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1682218724302!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <footer >
+        <div class="footer-container">
+            <div class="box" >
+                <h3>About us </h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus odio iure nulla nemo doloremque eos minima officia voluptate commodi similique!</p>
+                <button class="footer-btn">Read More</button>  
+            </div>
+            <div class="box" >
+                <h3 id="quicklinks">Quick links</h3>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About us </a>
+                    </li>
+                    <li>
+                        <a href="#">Product </a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Shop</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact us </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box">
+                    <h3>Follow us </h3>
+                    <ul>
+                        <li>
+                            <img src="../logo/facebook.svg" alt="">
+                            <span>Facebook</span>
+                        </li>
+                        <li>
+                            <img src="../logo/twitter.svg" alt="">
+                            <span>Twitter</span>
+                        </li>
+                        <li>
+                            <img src="../logo/google.svg" alt="">
+                            <span>Goggle</span>
+                        </li>
+                        <li>
+                            <img src="../logo/instagram.svg" alt="">
+                            <span>Instagram</span>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+
+            <!--<div class="box ,instagram-img">
+                <h3>Instagram</h3>
+                <div class="posts">
+                    <div>
+                        <img src="../image/food-table.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="../image/food-table.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="../image/food-table.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="../image/food-table.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="../image/food-table.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="../image/food-table.jpg" alt="">
+                    </div>
+                </div>          
+            </div>-->
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
